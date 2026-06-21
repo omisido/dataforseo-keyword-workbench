@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Local DataForSEO keyword search-volume workbench">
+    <title>Keyword Workbench</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-lockup">
+        <span class="brand-symbol" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Powered by DataForSEO API</p>
+          <h1>Keyword Workbench</h1>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span id="headerMarket" class="market-label">Google Ads · United Kingdom</span>
+        <span id="connectionBadge" class="status-badge" data-state="checking">Checking connection</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="workspace-intro">
+        <div>
+          <p class="page-kicker">Keywords Data API</p>
+          <h2>Search demand, without the spreadsheet shuffle.</h2>
+          <p>Submit a clean keyword set and inspect market-level volume, CPC and paid competition in one place.</p>
+        </div>
+        <span class="endpoint-chip">Google Ads Search Volume · Live</span>
+      </div>
+
+      <div class="workspace-grid">
+        <section class="research-panel" aria-labelledby="research-heading">
+          <div class="section-heading">
+            <div>
+              <span class="step-label">01</span>
+              <h3 id="research-heading">Build your request</h3>
+              <p>One keyword per line, or comma-separated.</p>
+            </div>
+            <span id="keywordCount" class="count">0 keywords</span>
+          </div>
+
+          <form id="researchForm">
+            <div class="input-label-row">
+              <label for="keywords">Keywords</label>
+              <button id="clearButton" class="text-button" type="button">Clear</button>
+            </div>
+            <textarea id="keywords" name="keywords" rows="11" spellcheck="false" placeholder="document scanner&#10;scanner with OCR&#10;office document scanner"></textarea>
+
+            <div class="controls">
+              <div class="field-group">
+                <label for="location">Market</label>
+                <select id="location" name="locationCode">
+                  <option value="2826" data-language="en" data-short-name="UK">United Kingdom</option>
+                  <option value="2840" data-language="en" data-short-name="USA">United States</option>
+                  <option value="2276" data-language="de" data-short-name="DE">Germany</option>
+                  <option value="2380" data-language="it" data-short-name="IT">Italy</option>
+                  <option value="2250" data-language="fr" data-short-name="FR">France</option>
+                  <option value="2724" data-language="es" data-short-name="ES">Spain</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="language">Language</label>
+                <select id="language" name="languageCode">
+                  <option value="en">English</option>
+                  <option value="de">German</option>
+                  <option value="it">Italian</option>
+                  <option value="fr">French</option>
+                  <option value="es">Spanish</option>
+                </select>
+              </div>
+            </div>
+            <button id="runButton" class="primary-button" type="submit">
+              <span>Run keyword research</span><span aria-hidden="true">→</span>
+            </button>
+            <div class="request-note"><span class="request-dot" aria-hidden="true"></span>Up to 1,000 unique keywords per request</div>
+          </form>
+        </section>
+
+        <div class="results-column">
+          <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+
+          <section class="results-section" aria-labelledby="results-heading">
+            <div class="section-heading results-heading">
+              <div>
+                <span class="step-label">02</span>
+                <h3 id="results-heading">Review the opportunity</h3>
+                <p id="resultsSummary">No research run yet.</p>
+              </div>
+              <button id="exportButton" class="secondary-button" type="button" disabled>Export CSV</button>
+            </div>
+
+            <div class="metrics-strip" aria-label="Result summary">
+              <div><span>Keywords</span><strong id="metricKeywords">—</strong></div>
+              <div><span>With volume</span><strong id="metricNonzero">—</strong></div>
+              <div><span>Combined volume</span><strong id="metricVolume">—</strong></div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col"><button class="sort-button" data-key="keyword">Keyword</button></th>
+                    <th scope="col" class="numeric"><button class="sort-button" data-key="searchVolume">Search volume</button></th>
+                    <th scope="col" class="numeric"><button class="sort-button" data-key="cpc">CPC (USD)</button></th>
+                    <th scope="col"><button class="sort-button" data-key="competition">Competition</button></th>
+                    <th scope="col" class="numeric"><button class="sort-button" data-key="competitionIndex">Index</button></th>
+                  </tr>
+                </thead>
+                <tbody id="resultsBody">
+                  <tr class="empty-row"><td colspan="5"><span class="empty-icon" aria-hidden="true">↗</span><strong>Ready for a keyword set</strong><span>Your results will appear here after the first request.</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
