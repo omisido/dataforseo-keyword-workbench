@@ -4,6 +4,10 @@ A small, dependency-free local interface for researching Google Ads keyword sear
 
 > **Unofficial project:** Keyword Workbench is an independent community project. It is not affiliated with, endorsed by, or maintained by DataForSEO. DataForSEO is a trademark of its respective owner.
 
+## Read the guide
+
+For the complete walkthrough, read [Build Your Local Keyword Research Tool with DataForSEO](https://omisido.com/build-your-local-keyword-research-tool-with-dataforseo/). It explains the idea behind the project, local setup, API connection, metric interpretation, security and ways to extend the tool.
+
 ## Features
 
 - Research up to 1,000 unique keywords per request
@@ -83,7 +87,8 @@ docs/                           Product and technical documentation
 
 ## Documentation
 
-- [Build Your Local Keyword Research Tool with DataForSEO](docs/articles/build-your-local-keyword-research-tool-with-dataforseo.md)
+- [Published setup and usage guide](https://omisido.com/build-your-local-keyword-research-tool-with-dataforseo/)
+- [Article source in Markdown](docs/articles/build-your-local-keyword-research-tool-with-dataforseo.md)
 - [API contract](docs/api/keyword-research.md)
 - [Module design](docs/architecture/keyword-research-module.md)
 - [Product requirements](docs/prd/dataforseo-keyword-workbench.md)
