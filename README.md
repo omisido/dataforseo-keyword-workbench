@@ -34,7 +34,18 @@ The launchers check for Node.js and open its official download page when it is n
 3. On the first run, add your DataForSEO API credentials to the `.env` file opened in TextEdit.
 4. Save the file and run the launcher again.
 
-Keep the Terminal window open while using the tool. If macOS blocks the launcher, Control-click it, choose **Open**, then confirm **Open**.
+Keep the Terminal window open while using the tool.
+
+### If macOS blocks the launcher
+
+Because the launcher is an unsigned open-source script downloaded from the internet, macOS may show an Apple verification warning on first use.
+
+1. Choose **Done**, not **Move to Bin**.
+2. Open **System Settings → Privacy & Security**.
+3. Scroll to **Security** and select **Open Anyway** for `Start Keyword Workbench.command`.
+4. Confirm with your password or Touch ID, then select **Open**.
+
+See [Opening Keyword Workbench on macOS](MACOS_FIRST_RUN.md) for illustrated-level detail and a safe Terminal fallback. Do not disable Gatekeeper globally.
 
 ## Run on Windows
 
@@ -89,6 +100,7 @@ docs/                           Product and technical documentation
 
 - [Published setup and usage guide](https://omisido.com/build-your-local-keyword-research-tool-with-dataforseo/)
 - [Article source in Markdown](docs/articles/build-your-local-keyword-research-tool-with-dataforseo.md)
+- [macOS first-run and Gatekeeper guide](MACOS_FIRST_RUN.md)
 - [API contract](docs/api/keyword-research.md)
 - [Module design](docs/architecture/keyword-research-module.md)
 - [Product requirements](docs/prd/dataforseo-keyword-workbench.md)

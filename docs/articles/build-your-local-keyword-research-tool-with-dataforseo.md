@@ -115,7 +115,7 @@ Replace the placeholder values with your own DataForSEO API credentials, save th
 
 Keep the Terminal or Command Prompt window opened by the launcher running while you use the tool. Closing that window stops Keyword Workbench. Nothing remains running permanently in the background.
 
-If macOS blocks the downloaded launcher the first time, Control-click it, select **Open** and then confirm **Open**. This is the standard macOS process for opening a downloaded script that has not been distributed through the App Store. Windows users can run the `.bat` launcher directly from the unzipped project folder.
+If macOS blocks the downloaded launcher the first time, choose **Done** rather than **Move to Bin**. Open **System Settings**, select **Privacy & Security**, scroll to the **Security** section and choose **Open Anyway** for `Start Keyword Workbench.command`. Confirm with your password or Touch ID, then select **Open**. This approval is normally required only once. Do not disable Gatekeeper globally. Windows users can run the `.bat` launcher directly from the unzipped project folder.
 
 The connection badge in the header will tell you whether the local server has found your credentials. If it says **API configured**, you are ready to run your first request.
 

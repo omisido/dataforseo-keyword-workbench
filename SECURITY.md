@@ -16,3 +16,4 @@ Report suspected vulnerabilities privately to the repository owner using GitHub'
 - `.env` is excluded from Git and downloadable archives.
 - Browser JavaScript must never receive the credentials or an authorization header.
 - The server binds to `127.0.0.1` by default and should not be exposed to a network without adding authentication and transport security.
+- Do not disable macOS Gatekeeper globally to run Keyword Workbench. Follow the file-specific steps in `MACOS_FIRST_RUN.md`.
